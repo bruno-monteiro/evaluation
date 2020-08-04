@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <title>News' Toponyms Evaluation</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.css">
+
+    <link rel="stylesheet" href="static/css/templatemo-breezed.css">
+
+    <link rel="stylesheet" href="static/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="static/css/lightbox.css">
+
+
+    <style>
+        .newsText {
+            font: Raleway;
+            font-size: 18px;
+            text-align: justify;
+            text-justify: inter-word;
+            padding-bottom: 12px;
+        }
+
+        .newsTitle {
+            font: Raleway;
+            font-size: 27px;
+            text-align: justify;
+            text-justify: inter-word;
+            font-weight: bold;
+            padding-top: 18px;
+            padding-bottom: 6px;
+        }
+
+        .newsSubTitle {
+            font: Raleway;
+            font-size: 18px;
+            color: #5FB759;
+            text-align: justify;
+            text-justify: inter-word;
+            padding-bottom: 12px;
+        }
+
+        .evaluationBoard {
+            background-color: #d7fcd5;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        .evaluationText {
+            font: Raleway;
+            font-size: 18px;
+            color: rgba(109, 94, 94, 0.904);
+            font-weight: bold;
+            text-align: center;
+            padding-top: 18px;
+            padding-bottom: 12px;
+        }
+
+        .myPadding {
+            margin: auto;
+            padding: 1px 3px 3px 3px;
+        }
+
+        .mybtnGroup {
+            border: 1px transparent;
+        }
+
+        .btnYes,
+        .btnNo,
+        .btnNA {
+            background-color: whitesmoke;
+            font-size: 12px;
+        }
+
+        .btn.btnYes.active.active,
+        .btn.btnYes.active:active,
+        .btn.btnYes.active.focus,
+        .btn.btnYes.active:focus,
+        .btn.btnYes.active:hover {
+            background-color: #5FB759;
+        }
+
+        .btnYes:focus,
+        .btnYes:hover {
+            background: #5FB759;
+        }
+
+        .btn.btnNo.active.active,
+        .btn.btnNo.active:active,
+        .btn.btnNo.active.focus,
+        .btn.btnNo.active:focus,
+        .btn.btnNo.active:hover {
+            background-color: rgb(252, 134, 134);
+        }
+
+        .btnNo:focus,
+        .btnNo:hover {
+            background: rgb(252, 134, 134);
+        }
+
+        .btnNA:focus,
+        .btnNA:hover {
+            background: rgb(239, 252, 56);
+        }
+
+        .btn.btnNA.active.active,
+        .btn.btnNA.active:active,
+        .btn.btnNA.active.focus,
+        .btn.btnNA.active:focus,
+        .btn.btnNA.active:hover {
+            background-color: rgb(239, 252, 56);
+        }
+
+        .myButton {
+            box-shadow: inset 0px 1px 0px 0px #ffffff;
+            background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #dcdcdc;
+            display: inline-block;
+            cursor: default;
+            color: #666666;
+            font: Raleway;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 3px 8px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #ffffff;
+        }
+
+        .myButtonSM {
+            box-shadow: inset 0px 1px 0px 0px #ffffff;
+            background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #dcdcdc;
+            display: inline-block;
+            cursor: pointer;
+            color: #666666;
+            font: Raleway;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 3px 8px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #ffffff;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Menu Principal ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <div class="logo">
+                            NEWS' TOPONYMS EVALUATION
+                        </div>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{{ url_for('index')}}">Home</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Final do Menu Principal ***** -->
+
+    <!-- Seção da Notícia + Botões de Avaliação -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <!-- Área da Notícia -->
+                <div class="col-8">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <p class="newsTitle">
+                                {{ title | safe }}
+                            </p>
+                            <p class="newsSubTitle">
+                                {{ subtitle | safe}}
+                            </p>
+                        </div>
+                        {% for paragraph in paragraphs %}
+                        <p class="newsText">
+                            {{ paragraph | safe }}
+                        </p>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- Fim da Área da Notícia -->
+
+                <!-- Área dos Botões de Avaliação -->
+                <div class="col-4 evaluationBoard">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <!-- Título do Quadro -->
+                            <p class="evaluationText">
+                                Quais são nomes de lugares?
+                            </p>
+                            <!-- tp_list = [buttons] -->
+                            {% for t in tp_list %}
+                            <div class="row myPadding">
+                                <!-- Botões/Nomes de lugares -->
+                                <div class="col-6 myPadding">
+                                    {{ t[1] | safe }}
+                                </div>
+                                <!-- Botões/Nomes de lugares -->
+                                <div class="col-6 myPadding">
+                                    <form action="{{ url_for('hello') }}" method="POST">
+                                        <div class="btn-group-sm btn-group-toggle mybtnGroup" data-toggle="buttons">
+                                            {%  set radioSim = t[0]|string + loop.index|string + 'sim'%}
+                                            {%  set radioNao = t[0]|string + loop.index|string + 'nao'%}
+                                            {%  set radioNA = t[0]|string + loop.index|string + 'NA' %}
+                                            <label class="btn btn-light btnYes">
+                                                <input type="radio" name="{{radioSim}}">Sim
+                                            </label>
+
+                                            <label class="btn btn-light btnNo">
+                                                <input type="radio" name="{{radioNao}}">Não
+                                            </label>
+
+                                            <label class="btn btn-light btnNA">
+                                                <input type="radio" name="{{radioNA}}">Não Sei
+                                            </label>
+                                        </div>
+                                </div>
+                            </div>
+                            <hr>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="center-block text-center">
+            <button type="submit" class="btn btn-lg btn-success" action="" target="_blank"
+                name="submit_button">Finalizar e Continuar</button></form>
+        </div>
+    </section>
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12">
+                    <div class="left-text-content">
+                        <p>Copyright &copy; 2020 Breezed Co., Ltd.
+
+                            - Design: <a rel="nofollow noopener" href="https://templatemo.com">TemplateMo</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <div class="right-text-content">
+                        <ul class="social-icons">
+                            <li>
+                                <p>Código-Fonte</p>
+                            </li>
+                            <li><a rel="nofollow" href="https://github.com/bruno-monteiro/news_evaluation">
+                                    <i class="fa fa-github-alt"></i>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- jQuery -->
+    <script src="static/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="static/js/popper.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="static/js/owl-carousel.js"></script>
+    <script src="static/js/scrollreveal.min.js"></script>
+    <script src="static/js/waypoints.min.js"></script>
+    <script src="static/js/jquery.counterup.min.js"></script>
+    <script src="static/js/imgfix.min.js"></script>
+    <script src="static/js/slick.js"></script>
+    <script src="static/js/lightbox.js"></script>
+    <script src="static/js/isotope.js"></script>
+
+    <!-- Global Init -->
+    <script src="static/js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <title>News' Toponyms Evaluation</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.css">
+
+    <link rel="stylesheet" href="static/css/templatemo-breezed.css">
+
+    <link rel="stylesheet" href="static/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="static/css/lightbox.css">
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <div class="logo">
+                            NEWS' TOPONYMS EVALUATION
+                        </div>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{{ url_for('index')}}" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about">Sobre</a></li>
+                            <li class="scroll-to-section"><a href="#projects">Como Fazer</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    {% block content%}
+    {% endblock %}
+
+   <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12">
+                    <div class="left-text-content">
+                        <p>Copyright &copy; 2020 Breezed Co., Ltd.
+
+                            - Design: <a rel="nofollow noopener" href="https://templatemo.com">TemplateMo</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <div class="right-text-content">
+                        <ul class="social-icons">
+                            <li>
+                                <p>Código-Fonte</p>
+                            </li>
+                            <li><a rel="nofollow" href="https://github.com/bruno-monteiro/news_evaluation">
+                                    <i class="fa fa-github-alt"></i>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    {% block scripts %}
+    {% endblock %}
+
+</body>
+
+</html>

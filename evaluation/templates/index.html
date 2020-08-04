@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-banner header-text" id="top">
+    <div class="Modern-Slider">
+        <!-- Item -->
+        <div class="item">
+            <div class="img-fill">
+                <img src="static/images/slide-01.jpg" alt="">
+                <div class="text-content">
+                    <h3>News' Toponyms Evaluation</h3>
+                    <h5>Análise dos topônimos presentes em textos de notícias</h5>
+                    <a href="{{ url_for('.analisar')}}" class="main-filled-button">Analisar <i class="fa fa-newspaper-o"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- // Item -->
+    </div>
+</div>
+<div class="scroll-down scroll-to-section"><a href="#about"><i class="fa fa-arrow-down"></i></a></div>
+<!-- ***** Main Banner Area End ***** -->
+
+<!-- ***** About Area Starts ***** -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="left-text-content">
+                    <div class="section-heading">
+                        <h6>Sobre o projeto</h6>
+                        <h2>We work with top brands and startups</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="static/images/service-item-01.png" alt="">
+                                <h4>Top Notch</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="service-item">
+                                <img src="static/images/service-item-01.png" alt="">
+                                <h4>Robust</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <div class="right-text-content">
+                    <p><a rel="nofollow noopener" href="https://templatemo.com/tm-543-breezed" target="_parent">Breezed
+                            HTML Template</a> is provided by TemplateMo for absolutely free
+                        of charge. You can download, edit and use this for your non-commercial and commercial
+                        websites.
+                        <br><br>Redistributing this template as a downloadable ZIP file on any template collection
+                        website is strictly prohibited. You will need to talk to us if you want to redistribute this
+                        template. Thank you.
+                        <br><br>This is a Bootstrap v4.3.1 CSS layout. Do you like it? You can feel free to <a
+                            rel="nofollow noopener" href="https://templatemo.com/contact" target="_parent">talk to
+                            us</a> if you have anything.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="scroll-down scroll-to-section"><a href="#projects"><i class="fa fa-arrow-down"></i></a></div>
+<!-- ***** About Area Ends ***** -->
+
+<!-- ***** Projects Area Starts ***** -->
+<section class="section" id="projects" style="padding-top:20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h6>Como fazer</h6>
+                    <h2>Passos para realizar a análise</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Projects Area Ends ***** -->
+
+<!-- ***** Features Big Item Start ***** -->
+<section class="section" id="features" style="padding-top:20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                <div class="features-item">
+                    <div class="features-icon">
+                        <img src="static/images/features-icon-1.png" alt="">
+                    </div>
+                    <div class="features-content">
+                        <h4>Initial Work</h4>
+                        <p>Proin euismod sem ut diam ultricies, ut faucibus velit ultricies. Nam eu turpis quam.
+                            Duis ac condimentum eros.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                <div class="features-item">
+                    <div class="features-icon">
+                        <img src="static/images/features-icon-1.png" alt="">
+                    </div>
+                    <div class="features-content">
+                        <h4>Master Planning</h4>
+                        <p>Proin euismod sem ut diam ultricies, ut faucibus velit ultricies. Nam eu turpis quam.
+                            Duis ac condimentum eros.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12"
+                data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                <div class="features-item">
+                    <div class="features-icon">
+                        <img src="static/images/features-icon-1.png" alt="">
+                    </div>
+                    <div class="features-content">
+                        <h4>Smooth Execution</h4>
+                        <p>Proin euismod sem ut diam ultricies, ut faucibus velit ultricies. Nam eu turpis quam.
+                            Duis ac condimentum eros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ***** Features Big Item End ***** -->
+{% endblock %}
+
+{% block scripts %}
+<!-- jQuery -->
+<script src="static/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="static/js/popper.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="static/js/owl-carousel.js"></script>
+<script src="static/js/scrollreveal.min.js"></script>
+<script src="static/js/waypoints.min.js"></script>
+<script src="static/js/jquery.counterup.min.js"></script>
+<script src="static/js/imgfix.min.js"></script>
+<script src="static/js/slick.js"></script>
+<script src="static/js/lightbox.js"></script>
+<script src="static/js/isotope.js"></script>
+
+<!-- Global Init -->
+<script src="static/js/custom.js"></script>
+{% endblock %}
